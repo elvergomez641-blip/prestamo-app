@@ -1,130 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Credito Industrial</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 420px;
-      margin: auto;
-      background: #ffffff;
-      padding: 16px;
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    .label {
-      color: #666;
-    }
-    .value {
-      font-weight: bold;
-      color: #333;
-    }
-    .section {
-      margin-top: 20px;
-    }
-    .section-title {
-      background: linear-gradient(90deg, #d4a017, #f1c232);
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 14px;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-    .card {
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 12px;
-      margin-top: 10px;
-      background: #fafafa;
-    }
-    .highlight {
-      color: #d4a017;
-      font-weight: bold;
-    }
-    .button {
-      margin-top: 20px;
-      background: linear-gradient(90deg, #d4a017, #f1c232);
-      color: #fff;
-      text-align: center;
-      padding: 12px;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .contact {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .contact div {
-      width: 40px;
-      height: 40px;
-      background: #f1c232;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 18px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalle del Préstamo</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f2f4f8;
+}
+
+/* HEADER */
+.header{
+    background:#d4a017;
+    color:white;
+    padding:20px;
+}
+
+.header h2{
+    margin:0;
+}
+
+.advertencia{
+    margin-top:10px;
+    font-size:14px;
+    color:#ffd369;
+}
+
+/* CARD PRINCIPAL */
+.card{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.titulo{
+    color:#2a9d8f;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.flex{
+    display:flex;
+    justify-content:space-between;
+}
+
+.monto{
+    font-size:30px;
+    font-weight:bold;
+    color:#1d3557;
+}
+
+.fecha{
+    font-size:20px;
+    color:#1d3557;
+}
+
+.sub{
+    color:gray;
+    font-size:14px;
+}
+
+/* CUOTAS */
+.cuota{
+    background:white;
+    margin:15px 20px;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cuota h4{
+    margin:5px 0;
+}
+
+.rojo{
+    color:red;
+    font-weight:bold;
+}
+
+.verde{
+    background:#2ec4b6;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    display:inline-block;
+    font-size:12px;
+    margin-bottom:10px;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="row"><span class="label">Nombre de APP</span><span class="value">CreditoIndustrial</span></div>
-    <div class="row"><span class="label">Tipo del pedido</span><span class="value">Pedido normal</span></div>
-    <div class="row"><span class="label">Tipo de cobro</span><span class="value">Cobro Normal</span></div>
-    <div class="row"><span class="label">Tipo de cuenta</span><span class="value">Cliente antiguo</span></div>
 
-        <div class="section">
-      <div class="section-title">Información del prestario</div>
-      <div class="row"><span class="label">Teléfono</span><span class="value"></span>2344400379</div>
-      <div class="row"><span class="label">Nombre</span><span class="value"></span>Patricia Ojeda </div>
-        <div class="row"><span class="label">Numero De Documento</span><span class="value">36386943</span></div>
-        <div class="row"><span class="label">E-mail</span><span class="value"></span>patriciajudit40@gmail.com</div>
+<div class="header">
+    <h2>NubeDorada</h2>
+    <p>+593 98****858</p>
 
-  <!--  
-
-    -->
-  
-      <div class="row"><span class="label">Sexo</span><span class="value">Femenino</span></div>
-      <div class="contact">
-        <div>📞</div>
-        <div>💬</div>
-       
-      </div>
+    <div class="advertencia">
+        Advertencia: Al realizar el pago, por favor confirma que el numero de telefono y el nombre en la pagina sean los tuyos. Recuerda no realizar pagos a numeros de telefono o cuentas de otras personas para evitar ser victima de una estafa.
     </div>
-  
+</div>
 
-    <div class="card">
-      <div class="row"><span class="highlight">Hoy vence la primera cuota</span></div>
-      <div class="row"><span class="label">Fecha de pago</span><span class="value">2026-04-01</span></div>
-      <div class="row"><span class="label">Monto a pagar</span><span class="value highlight">$108.000</span></div>
+
+<div class="card">
+    <div class="titulo">Devolución pendiente</div>
+
+    <div class="flex">
+        <div>
+            <div class="monto">$65</div>
+            <div class="sub">Monto del préstamo</div>
+        </div>
+
+        <div>
+            <div class="fecha">26-02-2026</div>
+            <div class="sub">Fecha del préstamo</div>
+        </div>
     </div>
+</div>
 
-      <div class="section">
-      <div class="section-title">Información del préstamo</div>
-      <div class="row"><span class="label">Monto del préstamo</span><span class="value">$216.000</span></div>
-      <div class="row"><span class="label">Tiempo de desembolso</span><span class="value">2026-03-25 14:47:45</span></div>
-      <div class="row"><span class="label">Plazo de préstamo</span><span class="value">2 cuotas (30 días)</span></div>
-      <div class="row"><span class="label highlight">Pago de prolongación</span><span class="value highlight">$108.000</span></div>
-    </div>
 
-  
+<div class="cuota">
+    <div class="verde">2/3</div>
+    <h4>Hoy vence la <span class="rojo">1Era cuota</span></h4>
+    <p>Fecha de pago: <span class="rojo">03-05-2026</span></p>
+    <p>Monto: <span class="rojo">$65</span></p>
+</div>
 
-    <div class="button">Ver Resultado Del Proseso y Registro de llamadas</div>
-  </div>
+
+<div class="cuota">
+    <div class="verde">3/3</div>
+    <h4>Faltan <span class="rojo">8 días</span> para la 2da cuota</h4>
+    <p>Fecha de pago: <span class="rojo">12-03-2026</span></p>
+    <p>Monto: <span class="rojo">$65</span></p>
+</div>
+
 </body>
 </html>
