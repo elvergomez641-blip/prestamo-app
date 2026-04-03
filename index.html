@@ -11,6 +11,7 @@ body{
     margin:0;
     font-family: Arial, sans-serif;
     background:#f2f4f8;
+    padding-bottom:80px; /* espacio para el botón */
 }
 
 /* HEADER */
@@ -94,6 +95,29 @@ body{
     margin-bottom:10px;
 }
 
+/* BOTÓN PAGAR */
+.boton-pagar{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: linear-gradient(90deg, #d4a017, #f1c232);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.boton-pagar:active{
+    transform: translateX(-50%) scale(0.95);
+}
+
 </style>
 </head>
 
@@ -107,7 +131,6 @@ body{
         Advertencia: Al realizar el pago, por favor confirma que el numero de telefono y el nombre en la pagina sean los tuyos. Recuerda no realizar pagos a numeros de telefono o cuentas de otras personas para evitar ser victima de una estafa.
     </div>
 </div>
-
 
 <div class="card">
     <div class="titulo">Devolución pendiente</div>
@@ -125,14 +148,12 @@ body{
     </div>
 </div>
 
-
 <div class="cuota">
     <div class="verde">1/2</div>
     <h4>Hoy vence la <span class="rojo">1Era cuota</span></h4>
     <p>Fecha de pago: <span class="rojo">04-02-2026</span></p>
     <p>Monto: <span class="rojo">$54.000</span></p>
 </div>
-
 
 <div class="cuota">
     <div class="verde">3/3</div>
@@ -141,7 +162,10 @@ body{
     <p>Monto: <span class="rojo">$54.000</span></p>
 </div>
 
-       
+<!-- BOTÓN -->
+<div class="boton-pagar">
+    💳 Pagar ahora
+</div>
 
 </body>
 </html>
