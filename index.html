@@ -3,103 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CreditoIndustrial</title>
+<title>NubeDorada Pago</title>
 
 <style>
 
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#f2f4f8;
-    padding-bottom:80px;
+    background: linear-gradient(180deg,#2b0fbf,#0a0a2a);
+    color:white;
 }
 
 /* HEADER */
 .header{
-    background:#d4a017;
-    color:white;
     padding:20px;
-}
-
-/* CARD */
-.card{
-    background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-.titulo{
-    color:#2a9d8f;
-    font-size:20px;
-}
-
-.flex{
+    font-size:26px;
+    font-weight:bold;
     display:flex;
     justify-content:space-between;
-}
-
-.monto{
-    font-size:30px;
-    font-weight:bold;
-}
-
-/* CUOTAS */
-.cuota{
-    background:white;
-    margin:15px 20px;
-    padding:15px;
-    border-radius:15px;
-}
-
-.rojo{ color:red; font-weight:bold; }
-
-.verde{
-    background:#2ec4b6;
-    color:white;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:12px;
-}
-
-/* BOTÓN */
-.boton-pagar{
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 400px;
-    background: linear-gradient(90deg, #d4a017, #f1c232);
-    color: white;
-    text-align: center;
-    padding: 15px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* PANTALLA MANTENIMIENTO */
-.mantenimiento{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:#f2f4f8;
-    justify-content:center;
     align-items:center;
 }
 
-.card-mant{
-    background:white;
-    padding:30px;
+.icon{
+    font-size:20px;
+}
+
+/* ALERTA */
+.alerta{
+    background:#0b0b1f;
+    margin:15px;
+    padding:15px;
     border-radius:20px;
+    display:flex;
+    gap:10px;
+    font-size:14px;
+    color:#cfcfcf;
+}
+
+.alerta span{
+    font-size:20px;
+}
+
+/* CARD PRINCIPAL */
+.card{
+    background:#050517;
+    margin:15px;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* TITULO */
+.titulo{
+    color:#a855f7;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+}
+
+/* INFO */
+.info{
+    width:50%;
+}
+
+.info-item{
+    margin-bottom:15px;
+}
+
+.label{
+    color:#888;
+    font-size:13px;
+}
+
+.valor{
+    color:#a855f7;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* QR */
+.qr{
     text-align:center;
-    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.qr img{
+    width:150px;
+    border-radius:10px;
+    background:white;
+    padding:5px;
+}
+
+.monto{
+    background:#6d28d9;
+    margin-top:10px;
+    padding:12px;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* TIMER CARD */
+.timer-card{
+    background:#050517;
+    margin:15px;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.timer{
+    font-size:26px;
+    color:#a855f7;
+    font-weight:bold;
+}
+
+.texto{
+    margin-top:10px;
+    color:#aaa;
+    font-size:14px;
+}
+
+/* BOTON */
+.boton{
+    position:fixed;
+    bottom:70px;
+    left:15px;
+    right:15px;
+    background: linear-gradient(90deg,#7c3aed,#9333ea);
+    text-align:center;
+    padding:18px;
+    border-radius:35px;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 5px 20px rgba(168,85,247,0.5);
+}
+
+/* MENU */
+.menu{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#0b0b1f;
+    display:flex;
+    justify-content:space-around;
+    padding:10px 0;
+}
+
+.menu div{
+    text-align:center;
+    font-size:12px;
+    color:#888;
+}
+
+.menu .activo{
+    color:#a855f7;
 }
 
 </style>
@@ -107,62 +170,99 @@ body{
 
 <body>
 
-<!-- CONTENIDO PRINCIPAL -->
-<div id="app">
-
+<!-- HEADER -->
 <div class="header">
-    <h2>CreditoIndustrial</h2>
-    <p>+54 376****074</p>
+    MatePlata
+    <div class="icon">🎧</div>
 </div>
 
+<!-- ALERTA -->
+<div class="alerta">
+    <span>🛡️</span>
+    <div>
+        Advertencia: Al realizar el pago, confirma que los datos del deudor sean tuyos. No pagues a cuentas de terceros para evitar fraude.
+    </div>
+</div>
+
+<!-- CARD INFO -->
 <div class="card">
-    <div class="titulo">Devolución pendiente</div>
 
-    <div class="flex">
-        <div>
-            <div class="monto">$54.000</div>
-            <div>Monto del préstamo</div>
+    <div class="titulo">Información del pago</div>
+
+    <div class="grid">
+
+        <!-- INFO -->
+        <div class="info">
+
+            <div class="info-item">
+                <div class="label">Deudor</div>
+                <div class="valor">Romina Fernández</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Número de teléfono</div>
+                <div class="valor">3625261900</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">Número de C.I.</div>
+                <div class="valor">30748285</div>
+            </div>
+
+            <div class="info-item">
+                <div class="label">E-mail</div>
+                <div class="valor">rominamail@gmail.com</div>
+            </div>
+
         </div>
 
-        <div>
-            <div>04-06-2026</div>
-            <div>Fecha del préstamo</div>
+        <!-- QR -->
+        <div class="qr">
+            <div style="color:#a855f7;">Escaneá y pagá</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=pago" />
+            <div class="monto">$27,000</div>
         </div>
+
+    </div>
+
+</div>
+
+<!-- TIMER -->
+<div class="timer-card">
+    <div>Tu código expira en:</div>
+    <div class="timer" id="contador">14:56</div>
+
+    <div class="texto">
+        Utiliza tu banco o billetera para escanear el código QR y realizar el pago.
     </div>
 </div>
 
-<div class="cuota">
-    <div class="verde">1/2</div>
-    <p>Hoy vence la <span class="rojo">1ra cuota</span></p>
-    <p>Fecha: <span class="rojo">11-04-2026</span></p>
+<!-- BOTON -->
+<div class="boton">
+    Pagar con mi banco / billetera
 </div>
 
-<div class="cuota">
-    <div class="verde">2/2</div>
-    <p>Faltan <span class="rojo">8 días</span></p>
-</div>
-
-</div>
-
-<!-- BOTÓN -->
-<div class="boton-pagar" onclick="mostrarMantenimiento()">
-    💳 Pagar ahora
-</div>
-
-<!-- PANTALLA DE MANTENIMIENTO -->
-<div class="mantenimiento" id="mant">
-    <div class="card-mant">
-        <h2 style="color:#d4a017;">⚙️ App en mantenimiento</h2>
-        <p>Estamos mejorando nuestros servicios</p>
-        <p>Intenta nuevamente más tarde</p>
-    </div>
+<!-- MENU -->
+<div class="menu">
+    <div class="activo">🏠<br>Home</div>
+    <div>👤<br>Mi perfil</div>
 </div>
 
 <script>
-function mostrarMantenimiento(){
-    document.getElementById("app").style.display = "none";
-    document.getElementById("mant").style.display = "flex";
-}
+// CONTADOR
+let tiempo = 896;
+
+setInterval(() => {
+    let min = Math.floor(tiempo / 60);
+    let seg = tiempo % 60;
+
+    document.getElementById("contador").innerText =
+        `${min}:${seg < 10 ? '0'+seg : seg}`;
+
+    if(tiempo > 0){
+        tiempo--;
+    }
+}, 1000);
 </script>
 
 </body>
