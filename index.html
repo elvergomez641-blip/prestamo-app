@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CobroPago</title>
+<title>PrestaFin</title>
 
 <style>
 
@@ -51,9 +51,12 @@ body{
     margin-bottom:20px;
 }
 
+/* 🔥 GRID PRO */
 .grid{
     display:flex;
     justify-content:space-between;
+    align-items:center;
+    gap:20px;
 }
 
 /* INFO */
@@ -65,10 +68,15 @@ body{
 .valor{
     color:#a855f7;
     font-weight:bold;
+    margin-bottom:10px;
 }
 
-/* ===== QR PRO ===== */
+/* ===== QR ===== */
 .qr{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     text-align:center;
 }
 
@@ -103,7 +111,7 @@ body{
     font-weight:bold;
 }
 
-/* ===== BOTON PRO ===== */
+/* ===== BOTON ===== */
 .boton{
     position:fixed;
     bottom:70px;
@@ -134,6 +142,43 @@ body{
     padding:10px 0;
 }
 
+/* ===== RESPONSIVE 📱 ===== */
+@media (max-width: 768px){
+
+    .header{
+        font-size:22px;
+        padding:15px;
+    }
+
+    .card, .alerta, .timer-card{
+        margin:10px;
+        padding:15px;
+    }
+
+    .grid{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:25px;
+    }
+
+    .grid div:first-child{
+        width:100%;
+        text-align:center;
+    }
+
+    .qr img{
+        width:200px;
+    }
+
+    .boton{
+        font-size:16px;
+        padding:16px;
+        bottom:80px;
+    }
+
+}
+
 /* ===== ANIMACIONES ===== */
 @keyframes pulse{
     0%{transform:scale(1);}
@@ -161,7 +206,7 @@ body{
 <body>
 
 <div class="header">
-    FinaNova
+    PrestaFin
 </div>
 
 <div class="alerta">
@@ -176,29 +221,22 @@ body{
 
         <div>
             <p class="label">Deudor</p>
-            <p class="valor">Cintia Beatriz Mena</p>
+            <p class="valor">Daniela Jara</p>
 
             <p class="label">Teléfono</p>
-            <p class="valor">3489304288</p>
+            <p class="valor">1164719572</p>
 
             <p class="label">C.I.</p>
-            <p class="valor">36856999</p>
+            <p class="valor">39800964</p>
             
-               <p class="label">Correo</p>
-            <p class="valor">cintiamenabeaz35@gmail.com</p>
-            
-            <!--
-
-     
-              
-            
-              -->
+            <p class="label">Correo</p>
+            <p class="valor">danijaraarjona19@gmail.com</p>
         </div>
 
         <div class="qr">
             <p>Escaneá</p>
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=PAGO-27000">
-            <div class="monto">$135.000.00</div>
+            <div class="monto">$198.450.00</div>
         </div>
 
     </div>
